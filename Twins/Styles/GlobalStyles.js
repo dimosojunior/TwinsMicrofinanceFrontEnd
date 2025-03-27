@@ -802,7 +802,7 @@ FullTaarifaZaMarejeshoRightText:{
 
 KeyboardAvoidingViewModalViewProduct:{
   flex: 1,
-  backgroundColor:'white',
+  backgroundColor:'#015d68',
   justifyContent:'center',
   alignItems:'center',
   width:'100%',
@@ -814,7 +814,8 @@ KeyboardAvoidingViewModalViewProduct:{
 ModalTitleViewProduct:{
   textAlign:'center',
   fontFamily:'SemiBold',
-  textAlign:'center'
+  textAlign:'center',
+  color:'white',
 },
 ConfirmCancelButtonTextViewProduct:{
   color:'white',
@@ -823,7 +824,7 @@ ConfirmCancelButtonTextViewProduct:{
 },
 
 EnterQuntityTextViewProduct:{
-  color:'black',
+  color:'white',
    fontFamily:'Light',
 },
  inputViewProduct: {
@@ -843,7 +844,7 @@ EnterQuntityTextViewProduct:{
     paddingHorizontal:20,
     // width: 340,
     //width:'100%',
-    backgroundColor: "white",
+    backgroundColor: "#063164",
     borderRadius: 20,
     elevation: 3,
     shadowColor: Platform.OS === "android" ? 'black' : "black",
@@ -860,7 +861,7 @@ EnterQuntityTextViewProduct:{
     flexDirection: "row",
     //width: 300,
     height: 50,
-    borderColor: "black",
+    borderColor: "white",
     borderWidth: 1,
     alignItems: "center",
     padding: 10,
@@ -904,7 +905,7 @@ EnterQuntityTextViewProduct:{
     justifyContent: "center",
     width: 140,
     height: 50,
-    backgroundColor: "green",
+    backgroundColor: "#015d68",
     borderRadius: 5,
 
 
@@ -976,7 +977,8 @@ EnterQuntityTextViewProduct:{
 
   InputiconViewProduct: {
     fontSize: 29,
-    marginRight: 10
+    marginRight: 10,
+    color:'white',
 
   },
   TaxTypeViewProduct: {
@@ -1338,15 +1340,15 @@ ProjectBodyInputIcon:{
         flex: 1, // Kufanya maandishi yajaze nafasi iliyobaki
     },
     TwinsMicrofinanceappTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
+        //fontSize: 18,
+        //fontWeight: 'bold',
         color: 'white',
-        fontFamily:"Medium",
+        fontFamily:"Bold",
     },
     TwinsMicrofinanceappDesc: {
-        fontSize: 14,
+        fontSize: 12,
         color: 'wheat',
-        fontFamily:"Light",
+        fontFamily:"Medium",
     },
 
 
@@ -1358,23 +1360,36 @@ ProjectBodyInputIcon:{
        // fontSize: 18,
         //fontWeight: 'bold',
         color: 'white',
-        fontFamily:"Medium",
+        fontFamily:"Bold",
     },
     TwinsMicrofinancesectionDesc: {
-        //fontSize: 14,
+        fontSize: 14,
         color: 'white',
         marginBottom: 10,
-        fontFamily:"Light",
+        fontFamily:"Medium",
     },
     TwinsMicrofinancecard: {
         width: width * 0.4,
-        backgroundColor: 'rgba(255,255,255,0.2)',
+        // backgroundColor: 'rgba(255,255,255,0.2)',
+        backgroundColor: "#015d68",
         borderRadius: 10,
         paddingBottom: 10,
         paddingTop:10,
         alignItems: 'center',
         marginHorizontal: 5,
     },
+
+     TwinsMicrofinancecard2: {
+        width: width * 0.4,
+        // backgroundColor: 'rgba(255,255,255,0.2)',
+        backgroundColor: "#063164",
+        borderRadius: 10,
+        paddingBottom: 10,
+        paddingTop:10,
+        alignItems: 'center',
+        marginHorizontal: 5,
+    },
+
     TwinsMicrofinancecardImage: {
         width: width * 0.4 - 10,
         height: 120,

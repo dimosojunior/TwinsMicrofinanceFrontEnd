@@ -551,7 +551,7 @@ const TableRowComponent = ({ item}) => {
 
 
 
-       <LinearGradient colors={['#015d68', '#000']} style={globalstyles.container}>
+       <LinearGradient colors={['#015d68', '#000']} style={globalStyles.container}>
           <MinorHeader />
 
           <View style={{ width: '100%', marginVertical: 0 }}>
@@ -806,7 +806,7 @@ style={{
           <View style={globalStyles.FilterModalmodalContent}>
          {/* <TouchableOpacity 
           onPress ={move}>
-            <Text style={globalstyles.modalTitle}>ALL</Text>
+            <Text style={globalStyles.modalTitle}>ALL</Text>
             </TouchableOpacity>*/}
             <DatePicker
               mode="calendar"

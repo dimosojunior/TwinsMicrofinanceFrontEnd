@@ -32,6 +32,8 @@ import DirectHeader from '../Header/DirectHeader';
 import MinorHeader from '../Header/MinorHeader';
 import { useFocusEffect } from '@react-navigation/native';
 
+import { LinearGradient } from 'expo-linear-gradient';
+
 const { width, height } = Dimensions.get('screen');
 
 
@@ -273,8 +275,7 @@ const addCartItem = async () => {
        
 
  
-
-    <View style={globalStyles.container}>
+<LinearGradient colors={['#015d68', '#000']} style={globalStyles.container}>
 
 <MinorHeader />
 
@@ -342,7 +343,7 @@ keyboardShouldPersistTaps="handled"
 
      {SimuYaMteja && (
        <Text style={globalStyles.TaarifaBinafsiSimuYaMteja}>
-     Simu: {SimuYaMteja}    
+     Simu: 0{SimuYaMteja}    
       </Text>
       )}
 
@@ -495,7 +496,8 @@ keyboardShouldPersistTaps="handled"
             //backgroundColor: "white",
             position:'absolute',
             bottom:0,
-            width:'100%',
+           // width:'100%',
+           right:5,
 
           },
            
@@ -530,7 +532,7 @@ keyboardShouldPersistTaps="handled"
             style={{
               
               padding: 10,
-              width:'100%',
+              //width:'100%',
               borderRadius: 6,
               flexDirection: "row",
               alignItems: "center",
@@ -544,14 +546,15 @@ keyboardShouldPersistTaps="handled"
              //fontWeight: "500", 
              color: "white" ,
             // padding:13,
-             backgroundColor: "black",
+             backgroundColor: "#015d68",
              borderColor:'white',
              borderWidth:1,
              textAlign:'center',
              borderRadius:8,
-             width:'100%',
+             //width:'100%',
              fontFamily:'Light',
              paddingVertical:10,
+             paddingHorizontal:20,
 
            }}>
               Pokea Faini
@@ -578,7 +581,7 @@ keyboardShouldPersistTaps="handled"
                 customView={
                   <View style={globalStyles.alertContent}>
                     <Image source={require('../assets/icon.png')} style={globalStyles.alertImage} />
-                    <Text style={globalStyles.alertTitle}>Gegwajo Microfinance</Text>
+                    <Text style={globalStyles.alertTitle}>Twins Microfinance</Text>
                     <Text style={globalStyles.alertMessage}>{alertMessage}</Text>
                   </View>
                 }
@@ -599,7 +602,9 @@ keyboardShouldPersistTaps="handled"
 
     >
     <ScrollView keyboardShouldPersistTaps="handled">
-        <View style={{ flex: 1,marginTop:height/4, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
+        <View style={{ flex: 1,marginTop:height/4, 
+          justifyContent: 'center', alignItems: 'center',
+            }}>
           <View style={globalStyles.ModalViewViewProduct}>
             <Text style={globalStyles.ModalTitleViewProduct}>Pokea Rejesho</Text>
 
@@ -607,11 +612,14 @@ keyboardShouldPersistTaps="handled"
                     style={globalStyles.EnterQuntityTextViewProduct}
                     > Weka kiasi cha faini anacholipa</Text>
                     < View style={globalStyles.inputViewProduct}>
-                        <FontAwesome style={globalStyles.InputIconViewProduct} name='pencil'/>
+                        <FontAwesome style={globalStyles.InputIconViewProduct}
+                         name='pencil'
+                         color="white"
+                         />
                         <TextInput 
                         style={[globalStyles.textInputViewProduct,
                           {
-                            color:'black',
+                            color:'white',
                           }
 
                           ]}  
@@ -619,7 +627,7 @@ keyboardShouldPersistTaps="handled"
                         value={KiasiChaFainiChaSiku}
                   onChangeText={text => setKiasiChaFainiChaSiku(text)}
                   keyboardType="numeric"
-                  placeholderTextColor="black"
+                  placeholderTextColor="white"
                         />
                     </View>
                 
@@ -655,7 +663,7 @@ keyboardShouldPersistTaps="handled"
 
 
        
-    </View>
+    </LinearGradient>
 
 
 

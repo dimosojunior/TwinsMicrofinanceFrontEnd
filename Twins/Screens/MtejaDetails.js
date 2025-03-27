@@ -28,6 +28,7 @@ import LotterViewScreen from '../Screens/LotterViewScreen';
 
 import MinorHeader from '../Header/MinorHeader';
 import { useFocusEffect } from '@react-navigation/native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -395,7 +396,7 @@ style={[globalStyles.FullTaarifaZaMarejeshoRightText,
 
    
 
-    <View style={globalStyles.container}>
+    <LinearGradient colors={['#015d68', '#000']} style={globalStyles.container}>
 
 <MinorHeader />
 
@@ -474,7 +475,7 @@ onScroll={handleScroll} scrollEventThrottle={16}
 <View style={globalStyles.TaarifaBinafsimkopo}>
 {SimuYaMzaminiWa1 && (
  <Text style={globalStyles.TaarifaBinafsiSimuYaMtejaMkopoText}>
-     Win: 0{SimuYaMzaminiWa1}    
+     Mzn: 0{SimuYaMzaminiWa1}    
       </Text>
       )}
  
@@ -680,7 +681,8 @@ style={globalStyles.TaarifaBinafsiMarejeshoYakeHeadingContainer}
             //backgroundColor: "white",
             position:'absolute',
             bottom:0,
-            width:'100%',
+           // width:'100%',
+           right:5,
 
           },
            
@@ -711,7 +713,7 @@ style={globalStyles.TaarifaBinafsiMarejeshoYakeHeadingContainer}
             style={{
               
               padding: 10,
-              width:'100%',
+              //width:'100%',
               borderRadius: 6,
               flexDirection: "row",
               alignItems: "center",
@@ -725,14 +727,15 @@ style={globalStyles.TaarifaBinafsiMarejeshoYakeHeadingContainer}
              //fontWeight: "500", 
              color: "white" ,
             // padding:13,
-             backgroundColor: "black",
+             backgroundColor: "#015d68",
              borderColor:'white',
              borderWidth:1,
              textAlign:'center',
              borderRadius:8,
-             width:'100%',
+            // width:'100%',
              fontFamily:'Light',
              paddingVertical:10,
+             paddingHorizontal:20,
 
            }}>
               Jumla: {formatToThreeDigits(totalRejeshoLeo)}
@@ -743,14 +746,15 @@ style={globalStyles.TaarifaBinafsiMarejeshoYakeHeadingContainer}
              //fontWeight: "500", 
              color: "white" ,
             // padding:13,
-             backgroundColor: "black",
+             backgroundColor: "#015d68",
              borderColor:'white',
              borderWidth:1,
              textAlign:'center',
              borderRadius:8,
-             width:'100%',
+            // width:'100%',
              fontFamily:'Light',
              paddingVertical:10,
+             paddingHorizontal:20,
 
            }}>
               Jumla: 0
@@ -780,12 +784,12 @@ style={globalStyles.TaarifaBinafsiMarejeshoYakeHeadingContainer}
                 customView={
                   <View style={globalStyles.alertContent}>
                     <Image source={require('../assets/icon.png')} style={globalStyles.alertImage} />
-                    <Text style={globalStyles.alertTitle}>Gegwajo Microfinance</Text>
+                    <Text style={globalStyles.alertTitle}>Twins Microfinance</Text>
                     <Text style={globalStyles.alertMessage}>{alertMessage}</Text>
                   </View>
                 }
               />
-    </View>
+    </LinearGradient>
 
 
 

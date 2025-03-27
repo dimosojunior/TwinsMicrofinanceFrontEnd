@@ -33,6 +33,8 @@ import LotterViewScreen from '../Screens/LotterViewScreen';
 import MinorHeader from '../Header/MinorHeader';
 import { useFocusEffect } from '@react-navigation/native';
 
+import { LinearGradient } from 'expo-linear-gradient';
+
 const { width, height } = Dimensions.get('screen');
 
 const MarejeshoWatejaWoteHai = ({navigation}) => {
@@ -567,9 +569,15 @@ const TableRowComponent = ({ item}) => {
 
      
       <Text style={[globalStyles.cell, globalStyles.firstNameColumn]}>{item.JinaKamiliLaMteja}</Text>
-      <Text style={[globalStyles.cell, globalStyles.tarehecolumn]}>{formatDate(item.Created)}</Text>
+      <Text style={[globalStyles.cell, globalStyles.tarehecolumn]}>{formatDate(item.TareheYaRejesho)}</Text>
       {item.KiasiAnachokopa > 0 ? (
       <Text style={[globalStyles.cell, globalStyles.otherColumns]}>{formatToThreeDigits(item.KiasiAnachokopa)}</Text>
+     ):(
+     <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
+     )}
+
+       {item.RejeshoKwaSiku > 0 ? (
+      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>{formatToThreeDigits(item.RejeshoKwaSiku)}</Text>
      ):(
      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
      )}
@@ -649,9 +657,15 @@ const TableRowComponent = ({ item}) => {
       )}
 
       <Text style={[globalStyles.cell, globalStyles.firstNameColumn]}>{item.JinaKamiliLaMteja}</Text>
-      <Text style={[globalStyles.cell, globalStyles.tarehecolumn]}>{formatDate(item.Created)}</Text>
+      <Text style={[globalStyles.cell, globalStyles.tarehecolumn]}>{formatDate(item.TareheYaRejesho)}</Text>
       {item.KiasiAnachokopa > 0 ? (
       <Text style={[globalStyles.cell, globalStyles.otherColumns]}>{formatToThreeDigits(item.KiasiAnachokopa)}</Text>
+     ):(
+     <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
+     )}
+
+      {item.RejeshoKwaSiku > 0 ? (
+      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>{formatToThreeDigits(item.RejeshoKwaSiku)}</Text>
      ):(
      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
      )}
@@ -941,7 +955,7 @@ style={globalStyles.FullRipotiYaSikuRightText}
 
 
 
-        <View style={globalStyles.container}>
+         <LinearGradient colors={['#015d68', '#000']} style={globalStyles.container}>
           <MinorHeader />
 
           <View style={{ width: '100%', marginVertical: 0 }}>
@@ -973,7 +987,7 @@ style={globalStyles.FullRipotiYaSikuRightText}
               <TextInput
                 value={input}
                 onChangeText={(text) => setInput(text)}
-                placeholder="Ingiza jina"
+                placeholder="Jina la mteja"
                 placeholderTextColor="black"
                 style={globalStyles.AppInputHomeScreenOtherPages}
               />
@@ -1021,8 +1035,10 @@ style={globalStyles.FullRipotiYaSikuRightText}
                
 
                   <Text style={[globalStyles.cell2, globalStyles.firstNameColumn]}>Jina</Text>
-                  <Text style={[globalStyles.cell2, globalStyles.tarehecolumn]}>Tarehe</Text>
+                  <Text style={[globalStyles.cell2, globalStyles.tarehecolumn]}>Tarehe Ya Rejesho</Text>
+                
                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Mkopo</Text>
+                    <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Rejesho/Wiki</Text>
                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Lipwa</Text>
                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Deni</Text>
                   
@@ -1059,6 +1075,7 @@ style={globalStyles.FullRipotiYaSikuRightText}
                   <Text style={[globalStyles.cell2, globalStyles.firstNameColumn]}>Jina</Text>
                   <Text style={[globalStyles.cell2, globalStyles.tarehecolumn]}>Tarehe</Text>
                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Mkopo</Text>
+                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Rejesho/Wiki</Text>
                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Lipwa</Text>
                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Deni</Text>
                   
@@ -1088,292 +1105,7 @@ style={globalStyles.FullRipotiYaSikuRightText}
 
   )} 
 
-         
-        {/* mwanzo wa kudisplay marejesho ya leo na faini za leo   */}   
-        <View style={{
-
-        }}>
-
-
-
-
-
-               <Text style={{
-                color:'white',
-                fontFamily:'Regular',
-                marginLeft:20,
-                marginTop:30,
-                fontSize:18,
-               }}>
-                 Marejesho ya leo
-               </Text>
-
-
-     {marejesho_queryset && marejesho_queryset.length > 0 ? (
-
-
-      <>
-
-       {marejesho_queryset.map((item, index) => {
-          return <MarejeshoYaLeoComponent item={item} key={item.id || index} />;
-          })}
-
-{/*mwanzo wa jumla*/}
-    <Pressable>
-    
-    <View 
-style={[globalStyles.FullRipotiYaSikuContainer,
-  {
-    width:'90%',
-  }]}
->
-
-<Pressable 
-style={globalStyles.FullRipotiYaSikuLeftMajorContainer}
->
-  
-
-
-{/*mwanzo wa Left View*/} 
-<View 
-style={[globalStyles.FullRipotiYaSikuLeftContainer,
-  {
-    backgroundColor:'#c07d18',
-  }
-
-  ]}
->
-<Text 
-style={[globalStyles.FullRipotiYaSikuLeftText,
-  {
-    fontFamily:'Bold',
-  }
-
-  ]}
- >Jumla</Text>
-</View>
-{/*mwanzo wa Left View*/} 
-
-
-</Pressable>
-
-
-
-
-
-{/*Right start here----------------------------------------------------*/}
-
-<Pressable 
-style={globalStyles.FullRipotiYaSikuRightMajorContainer}
->
- 
-
-
-
-{/*mwanzo wa Right View*/} 
-<View 
-style={[globalStyles.FullRipotiYaSikuRightContainer,
-
-   {
-    backgroundColor:'#c07d18',
-  }
-
-
-  ]}
->
-{totalRejeshoLeo2 > 0 ? (
-<Text 
-style={[globalStyles.FullRipotiYaSikuRightText,
-  {
-    fontFamily:'Bold',
-  }
-
-  ]}
- >{formatToThreeDigits(totalRejeshoLeo2)}</Text>
- ):(
-<Text 
-style={[globalStyles.FullRipotiYaSikuRightText,
-  {
-    fontFamily:'Bold',
-  }
-
-  ]}
- >0</Text>
- )}
-</View>
-{/*mwanzo wa Right View*/} 
-
-
-</Pressable>
-
-
-</View>
-
-    </Pressable>
-
-  {/*mwisho wa jumla*/}
-        
-</>
-):(
- 
-  <Text style={[globalStyles.noitemText,
-    {
-      textAlign:'Left',
-      backgroundColor:'rgba(0,0,0,0)',
-      marginLeft:0,
-    }
-
-
-    ]}>hukuna marejesho ya leo
-  </Text>
-
-)}
-
-
-
-
-
-               <Text style={{
-                color:'white',
-                fontFamily:'Regular',
-                marginLeft:20,
-                marginTop:30,
-                fontSize:18,
-               }}>
-                 Faini za leo
-               </Text>
-
-
-      {faini_queryset && faini_queryset.length > 0 ? (
-
-
-      <>
- 
-           {faini_queryset.map((item, index) => {
-          return <FainiZaLeoComponent item={item} key={item.id || index} />;
-          })}
-     
-
-{/*mwanzo wa jumla*/}
-    <Pressable>
-    
-    <View 
-style={[globalStyles.FullRipotiYaSikuContainer,
-  {
-    width:'90%',
-  }]}
->
-
-<Pressable 
-style={globalStyles.FullRipotiYaSikuLeftMajorContainer}
->
-  
-
-
-{/*mwanzo wa Left View*/} 
-<View 
-style={[globalStyles.FullRipotiYaSikuLeftContainer,
-  {
-    backgroundColor:'#c07d18',
-  }
-
-  ]}
->
-<Text 
-style={[globalStyles.FullRipotiYaSikuLeftText,
-  {
-    fontFamily:'Bold',
-  }
-
-  ]}
- >Jumla</Text>
-</View>
-{/*mwanzo wa Left View*/} 
-
-
-</Pressable>
-
-
-
-
-
-{/*Right start here----------------------------------------------------*/}
-
-<Pressable 
-style={globalStyles.FullRipotiYaSikuRightMajorContainer}
->
- 
-
-
-
-{/*mwanzo wa Right View*/} 
-<View 
-style={[globalStyles.FullRipotiYaSikuRightContainer,
-
-   {
-    backgroundColor:'#c07d18',
-  }
-
-
-  ]}
->
-{totalFainiLeo > 0 ? (
-<Text 
-style={[globalStyles.FullRipotiYaSikuRightText,
-  {
-    fontFamily:'Bold',
-  }
-
-  ]}
- >{formatToThreeDigits(totalFainiLeo)}</Text>
- ):(
-<Text 
-style={[globalStyles.FullRipotiYaSikuRightText,
-  {
-    fontFamily:'Bold',
-  }
-
-  ]}
- >0</Text>
- )}
-</View>
-{/*mwanzo wa Right View*/} 
-
-
-</Pressable>
-
-
-</View>
-
-    </Pressable>
-
-  {/*mwisho wa jumla*/}   
-       
-</>
-):(
- 
-  <Text style={[globalStyles.noitemText,
-    {
-      textAlign:'Left',
-      backgroundColor:'rgba(0,0,0,0)',
-      marginLeft:0,
-    }
-
-
-    ]}>hukuna faini za leo
-  </Text>
-
-)}
-
-
-
-
-
-
-
-
-         </View>
-          {/* mwisho wa kudisplay marejesho ya leo na faini za leo   */}  
+          
  
 
             </ScrollView>
@@ -1405,7 +1137,8 @@ style={[globalStyles.FullRipotiYaSikuRightText,
             //backgroundColor: "white",
             position:'absolute',
             bottom:0,
-            width:'100%',
+           // width:'100%',
+           right:5,
 
           },
            
@@ -1436,7 +1169,7 @@ style={[globalStyles.FullRipotiYaSikuRightText,
             style={{
               
               padding: 10,
-              width:'100%',
+              //width:'100%',
               borderRadius: 6,
               flexDirection: "row",
               alignItems: "center",
@@ -1450,14 +1183,15 @@ style={[globalStyles.FullRipotiYaSikuRightText,
              //fontWeight: "500", 
              color: "white" ,
             // padding:13,
-             backgroundColor: "black",
+             backgroundColor: "#015d68",
              borderColor:'white',
              borderWidth:1,
              textAlign:'center',
              borderRadius:8,
-             width:'100%',
+            // width:'100%',
              fontFamily:'Light',
              paddingVertical:10,
+             paddingHorizontal:20,
 
            }}>
               Jumla: {ActiveProjects}
@@ -1486,12 +1220,12 @@ style={[globalStyles.FullRipotiYaSikuRightText,
                 customView={
                   <View style={globalStyles.alertContent}>
                     <Image source={require('../assets/icon.png')} style={globalStyles.alertImage} />
-                    <Text style={globalStyles.alertTitle}>Gegwajo Microfinance</Text>
+                    <Text style={globalStyles.alertTitle}>Twins Microfinance</Text>
                     <Text style={globalStyles.alertMessage}>{alertMessage}</Text>
                   </View>
                 }
               />
-        </View>
+        </LinearGradient>
   
 
                 ):(

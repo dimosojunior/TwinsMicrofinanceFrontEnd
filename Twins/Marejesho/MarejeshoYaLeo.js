@@ -35,6 +35,7 @@ import MinorHeader from '../Header/MinorHeader';
 import { useFocusEffect } from '@react-navigation/native';
 import { getFormatedDate } from "react-native-modern-datepicker";
 import DatePicker from "react-native-modern-datepicker";
+import { LinearGradient } from 'expo-linear-gradient';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -500,7 +501,7 @@ const TableRowComponent = ({ item}) => {
 
 
 
-        <View style={globalStyles.container}>
+        <LinearGradient colors={['#015d68', '#000']} style={globalStyles.container}>
           <MinorHeader />
 
           <View style={{ width: '100%', marginVertical: 0 }}>
@@ -625,7 +626,7 @@ const TableRowComponent = ({ item}) => {
 style={[globalStyles.FullRipotiYaSikuContainer,
   {
     width:'90%',
-    backgroundColor:'#c07d18',
+    backgroundColor:'#015d68',
     marginHorizontal:20,
   }]}
 >
@@ -760,7 +761,8 @@ style={[globalStyles.FullRipotiYaSikuRightText,
             //backgroundColor: "white",
             position:'absolute',
             bottom:0,
-            width:'100%',
+           // width:'100%',
+           right:5,
 
           },
            
@@ -771,7 +773,7 @@ style={[globalStyles.FullRipotiYaSikuRightText,
 onPress={() => setModalVisible(true)}
 style={{
    padding: 10,
-    width:'100%',
+   // width:'100%',
     borderRadius: 6,
     flexDirection: "row",
     alignItems: "center",
@@ -783,14 +785,15 @@ style={{
     style={{
      color: "white" ,
       // padding:13,
-       backgroundColor: "black",
+       backgroundColor: "#015d68",
        borderColor:'white',
        borderWidth:1,
        textAlign:'center',
        borderRadius:8,
-       width:'100%',
+       //width:'100%',
        fontFamily:'Light',
        paddingVertical:10,
+       paddingHorizontal:20,
     }}
 
    >Tarehe ?</Text>
@@ -894,12 +897,12 @@ style={{
                 customView={
                   <View style={globalStyles.alertContent}>
                     <Image source={require('../assets/icon.png')} style={globalStyles.alertImage} />
-                    <Text style={globalStyles.alertTitle}>Gegwajo Microfinance</Text>
+                    <Text style={globalStyles.alertTitle}>Twins Microfinance</Text>
                     <Text style={globalStyles.alertMessage}>{alertMessage}</Text>
                   </View>
                 }
               />
-        </View>
+        </LinearGradient>
   
 
                 ):(

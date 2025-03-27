@@ -43,9 +43,20 @@ const contents = [
     { id: '1', title: 'Sajili Mteja', icon: 'cash-outline', screen: 'Sajili Mteja' },
     { id: '2', title: 'Mikataba Yote', icon: 'wallet-outline', screen: 'Mikataba Yote' },
     { id: '3', title: 'Mikataba Hai', icon: 'shield-checkmark-outline', screen: 'Mikataba Hai' },
-    { id: '4', title: 'Huduma za Kifedha', icon: 'stats-chart-outline', screen: 'HudumaScreen' },
-    { id: '5', title: 'Malipo', icon: 'card-outline', screen: 'MalipoScreen' },
+    { id: '4', title: 'Nje Ya Mkataba Leo', icon: 'stats-chart-outline', screen: 'Nje Ya Mkataba Leo' },
+    { id: '5', title: 'Nje Ya Mkataba Wote', icon: 'card-outline', screen: 'Nje Ya Mkataba Wote' },
+    { id: '6', title: 'Hawajakopa Tena', icon: 'card-outline', screen: 'Wamemaliza Hawajakopa Tena' },
 ];
+
+const contents2 = [
+    { id: '1', title: 'Marejesho', icon: 'cash-outline', screen: 'Sajili Mteja' },
+    { id: '2', title: 'Faini', icon: 'wallet-outline', screen: 'Mikataba Yote' },
+    { id: '3', title: 'Ripoti', icon: 'shield-checkmark-outline', screen: 'Mikataba Hai' },
+    { id: '4', title: 'Vituo', icon: 'stats-chart-outline', screen: 'Nje Ya Mkataba Leo' },
+    { id: '5', title: 'Wafanyakazi', icon: 'card-outline', screen: 'Nje Ya Mkataba Wote' },
+    { id: '6', title: 'Mishahara', icon: 'card-outline', screen: 'Wamemaliza Hawajakopa Tena' },
+];
+
 
 
 export default function HomeScreen ({navigation}) {
@@ -352,14 +363,14 @@ useEffect(() => {
                 <Text style={globalStyles.TwinsMicrofinancesectionTitle}>Fursa na Mikopo</Text>
                 <Text style={globalStyles.TwinsMicrofinancesectionDesc}>Pata fursa za mikopo na uwekezaji kwa urahisi.</Text>
                <FlatList
-                data={contents}
+                data={contents2}
                 horizontal
                 nestedScrollEnabled
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
                     <TouchableOpacity 
-                        style={globalStyles.TwinsMicrofinancecard} 
+                        style={globalStyles.TwinsMicrofinancecard2} 
                         onPress={() => navigation.navigate(item.screen)}
                     >
                         <Ionicons name={item.icon} size={80} 
