@@ -40,21 +40,21 @@ const { width, height } = Dimensions.get('screen');
 //     { id: '5', title: 'Malipo', image: require('../assets/tz.jpg') },
 // ];
 const contents = [
-    { id: '1', title: 'Sajili Mteja', icon: 'cash-outline', screen: 'Sajili Mteja' },
-    { id: '2', title: 'Mikataba Yote', icon: 'wallet-outline', screen: 'Mikataba Yote' },
-    { id: '3', title: 'Mikataba Hai', icon: 'shield-checkmark-outline', screen: 'Mikataba Hai' },
-    { id: '4', title: 'Nje Ya Mkataba Leo', icon: 'stats-chart-outline', screen: 'Nje Ya Mkataba Leo' },
-    { id: '5', title: 'Nje Ya Mkataba Wote', icon: 'card-outline', screen: 'Nje Ya Mkataba Wote' },
-    { id: '6', title: 'Hawajakopa Tena', icon: 'card-outline', screen: 'Wamemaliza Hawajakopa Tena' },
+    { id: '1', title: 'Marejesho', icon: 'credit-card', screen: 'Marejesho Ya Leo' },
+    { id: '2', title: 'Faini', icon: 'user-times', screen: 'Faini Za Leo' },
+
+    { id: '3', title: 'Mikataba Yote', icon: 'th-large', screen: 'Mikataba Yote' },
+    { id: '4', title: 'Mikataba Hai', icon: 'book', screen: 'Mikataba Hai' },
+    { id: '5', title: 'Nje Ya Mkataba Leo', icon: 'user-times', screen: 'Nje Ya Mkataba Leo' },
+    { id: '6', title: 'Nje Ya Mkataba Wote', icon: 'user-secret', screen: 'Nje Ya Mkataba Wote' },
+    { id: '7', title: 'Hawajakopa Tena', icon: 'user-o', screen: 'Wamemaliza Hawajakopa Tena' },
 ];
 
 const contents2 = [
-    { id: '1', title: 'Marejesho', icon: 'cash-outline', screen: 'Sajili Mteja' },
-    { id: '2', title: 'Faini', icon: 'wallet-outline', screen: 'Mikataba Yote' },
-    { id: '3', title: 'Ripoti', icon: 'shield-checkmark-outline', screen: 'Mikataba Hai' },
-    { id: '4', title: 'Vituo', icon: 'stats-chart-outline', screen: 'Nje Ya Mkataba Leo' },
-    { id: '5', title: 'Wafanyakazi', icon: 'card-outline', screen: 'Nje Ya Mkataba Wote' },
-    { id: '6', title: 'Mishahara', icon: 'card-outline', screen: 'Wamemaliza Hawajakopa Tena' },
+    { id: '1', title: 'Wafanyakazi', icon: 'users', screen: 'Sajili Mteja' },
+    { id: '2', title: 'Vituo', icon: 'user', screen: 'Mikataba Yote' },
+    
+    { id: '6', title: 'Mishahara', icon: 'user-circle', screen: 'Wamemaliza Hawajakopa Tena' },
 ];
 
 
@@ -333,7 +333,7 @@ useEffect(() => {
             
             {/* First Content List */}
             <View style={globalStyles.TwinsMicrofinancesection}>
-                <Text style={globalStyles.TwinsMicrofinancesectionTitle}>Huduma Yetu</Text>
+                <Text style={globalStyles.TwinsMicrofinancesectionTitle}>Mikopo</Text>
                 <Text style={globalStyles.TwinsMicrofinancesectionDesc}>Chagua huduma inayokufaa kutoka kwenye orodha yetu.</Text>
                <FlatList
                 data={contents}
@@ -346,7 +346,7 @@ useEffect(() => {
                         style={globalStyles.TwinsMicrofinancecard} 
                         onPress={() => navigation.navigate(item.screen)}
                     >
-                        <Ionicons name={item.icon} 
+                        <FontAwesome name={item.icon} 
                         size={80} 
                         color="white" 
                         style={globalStyles.TwinsMicrofinancecardIcon} 
@@ -360,7 +360,7 @@ useEffect(() => {
 
             {/* Second Content List */}
             <View style={globalStyles.TwinsMicrofinancesection}>
-                <Text style={globalStyles.TwinsMicrofinancesectionTitle}>Fursa na Mikopo</Text>
+                <Text style={globalStyles.TwinsMicrofinancesectionTitle}>Mishahara Na Wafanyakazi</Text>
                 <Text style={globalStyles.TwinsMicrofinancesectionDesc}>Pata fursa za mikopo na uwekezaji kwa urahisi.</Text>
                <FlatList
                 data={contents2}
@@ -373,7 +373,7 @@ useEffect(() => {
                         style={globalStyles.TwinsMicrofinancecard2} 
                         onPress={() => navigation.navigate(item.screen)}
                     >
-                        <Ionicons name={item.icon} size={80} 
+                        <FontAwesome name={item.icon} size={80} 
                         color="white" 
                         style={globalStyles.TwinsMicrofinancecardIcon} 
                          />

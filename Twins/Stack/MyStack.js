@@ -58,6 +58,10 @@ import TumaUjumbe from '../Screens/TumaUjumbe';
 import RenewMteja from '../Wateja/RenewMteja';
 import AddMteja from '../Wateja/AddMteja';
 
+import FutaRejesho from '../Marejesho/FutaRejesho';
+
+import FutaFaini from '../Marejesho/FutaFaini';
+
 
 const Stack = createStackNavigator();
 
@@ -362,6 +366,24 @@ function MyStack( {navigation}){
 
 
 
+
+
+  <Stack.Screen
+      name="Futa Rejesho"
+      component={FutaRejesho}
+      // options={ () => ({ 
+      //       headerLeft: () => <Header  title='About Page' />,
+      //     })}
+      />
+
+
+   <Stack.Screen
+      name="Futa Faini"
+      component={FutaFaini}
+      // options={ () => ({ 
+      //       headerLeft: () => <Header  title='About Page' />,
+      //     })}
+      />
 
 
 

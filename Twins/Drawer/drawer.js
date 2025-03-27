@@ -283,82 +283,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
 
                   </View>
 
-             {userData && userData.is_admin === true && (
-                   <TouchableOpacity
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                padding: 10,
-                marginLeft:15,
-              }}
-              onPress={() => setDropdownVisible2(!dropdownVisible2)}
-            >
-              <FontAwesome name="user" size={20} color="white" />
-              <Text style={{ color: "white", 
-              marginLeft: 30, fontFamily: "Light" 
-            }}>
-                Vituo
-              </Text>
-            </TouchableOpacity>
-            )}
-
-
-{userData && userData.is_admin === true && (
-  <>
- {dropdownVisible2 && (
-              <View style={{ 
-                marginLeft: 80,
-
-                 }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    setDropdownVisible2(false);
-                    navigation.navigate("Signup Stack"); // Navigate to first option
-                  }}
-                >
-                  <Text style={{ color: "white", marginVertical: 8 }}>
-                    Weka Taarifa za kituo
-                  </Text>
-                </TouchableOpacity>
-
-                  <TouchableOpacity
-                  onPress={() => {
-                    setDropdownVisible2(false);
-                    navigation.navigate("Ongeza Kituo"); // Navigate to first option
-                  }}
-                >
-                  <Text style={{ color: "white", marginVertical: 8 }}>
-                    Ongeza kituo
-                  </Text>
-                </TouchableOpacity>
-
-
-                   <TouchableOpacity
-                   
-                  // onPress={() => {
-                  //   setDropdownVisible2(false);
-                  //   Linking.openURL(WebsiteLink);
-                  //   //navigation.navigate("Faini Za Leo"); // Navigate to first option
-                  // }}
-
-                  onPress={() => {
-                    setDropdownVisible2(false);
-                    navigation.navigate("Vituo Vilivyosajiliwa"); // Navigate to first option
-                  }}
-
-                >
-                  <Text style={{ color: "white", marginVertical: 8 }}>
-                    Vituo vyote
-                  </Text>
-                </TouchableOpacity>
-
-                
-               
-              </View>
-            )}
-</>
-)}
-
+         
 
                   <DrawerItemList {...props} />
 
@@ -461,10 +386,12 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
                     bottom: 10,
                     left:10,
                     // right: width/2 - 70,
-                    backgroundColor: 'green',
+                    backgroundColor: '#063164',
                     padding: 10,
                     borderRadius: 6,
-                    width:'50%'
+                    width:'50%',
+                    borderColor:'white',
+                    borderWidth:1,
                     
 
 
@@ -479,6 +406,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
                    color: '#fff',
                     fontFamily:'Light',
                     textAlign:'center',
+                   // backgroundColor:'#015d68'
 
                   }}>Toka</Text>
                 </TouchableOpacity>
@@ -549,7 +477,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
         drawerStyle: {
           // backgroundColor: 'rgb(5,5,49)',
           //backgroundColor: '#F0F0F0',
-          backgroundColor:'#243137', //'#233329',
+          backgroundColor:'#063164', //'#233329',
           width: width -70 //260
         },
         headerStyle: {
@@ -691,7 +619,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
           component={HawajarejeshaJana}
         />
 
-        <Drawer.Screen
+     {/*   <Drawer.Screen
           name="Mikataba Yote"
           options={{
             drawerLabel: "Mikataba Yote",
@@ -704,9 +632,9 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
           component={MikatabaYote}
         />
 
+*/}
 
-
-           <Drawer.Screen
+       {/*    <Drawer.Screen
           name="Mikataba Hai"
           options={{
             drawerLabel: "Mikataba Hai",
@@ -717,7 +645,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
             )
           }}
           component={MikatabaHai}
-        />
+        />*/}
 
 
    <Drawer.Screen
@@ -734,7 +662,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
         />
 
 
-
+{/*
     <Drawer.Screen
           name="Nje Ya Mktaba Wote"
           options={{
@@ -747,7 +675,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
           }}
           component={NjeYaMkatabaWote}
         />
-
+*/}
 
    {/* <Drawer.Screen
           name="Scan"
