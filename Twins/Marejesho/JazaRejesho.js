@@ -32,6 +32,7 @@ import DirectHeader from '../Header/DirectHeader';
 import MinorHeader from '../Header/MinorHeader';
 import { useFocusEffect } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
+import Checkbox from 'expo-checkbox'; // Make sure to install this package
 
 const { width, height } = Dimensions.get('screen');
 
@@ -180,6 +181,7 @@ const formatToThreeDigits = (number) => {
 const [isPending, setPending] = useState(false);
 const [selectedProduct, setSelectedProduct] = useState(null);
 const [KiasiChaRejeshoChaSiku, setKiasiChaRejeshoChaSiku] = useState(0);
+ const [isDoubled, setIsDoubled] = useState(false);
 
  const [isPending2, setPending2] = useState(false);
 
@@ -205,6 +207,7 @@ const addCartItem = async () => {
       {
         Mteja: id,
         KiasiChaRejeshoChaSiku: parseInt(KiasiChaRejeshoChaSiku),
+        is_doubled: isDoubled, // True ikiwa checked, False ikiwa unchecked
 
       },
       {
@@ -224,6 +227,7 @@ const addCartItem = async () => {
         id: response.data.id, // Use the 'id' from the response data
         Mteja: id,
         KiasiChaRejeshoChaSiku: parseInt(KiasiChaRejeshoChaSiku),
+        is_doubled: isDoubled, // True ikiwa checked, False ikiwa unchecked
         //price: itemPrice,
       };
       // const updatedCart = [...cart, newItem];
@@ -623,10 +627,29 @@ keyboardShouldPersistTaps="handled"
                         value={KiasiChaRejeshoChaSiku}
                   onChangeText={text => setKiasiChaRejeshoChaSiku(text)}
                   keyboardType="numeric"
-                  placeholderTextColor="black"
+                  placeholderTextColor="white"
                         />
                     </View>
-                
+
+
+
+{/*mwanzo wa checkboxes*/}
+ <View style={styles.checkboxContainer}>
+        <View style={styles.checkboxRow}>
+          <Checkbox
+            value={isDoubled}
+            onValueChange={setIsDoubled}
+            color="#2196F3"
+            style={{
+               marginRight: 10,
+               height:50,
+               width:50,
+                }}
+          />
+          <Text style={styles.checkboxLabel}>Is Doubled ?</Text>
+        </View>
+        </View>
+    {/*mwisho wa checkboxes*/}            
 
 
 
@@ -672,5 +695,26 @@ keyboardShouldPersistTaps="handled"
 export default JazaRejesho;
 
 const styles = StyleSheet.create({
+
+  
+
+ checkboxContainer: {
+    width: '100%',
+    marginBottom: 20,
+    //backgroundColor:'red',
+    marginTop:20,
+  },
+  checkboxRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  checkboxLabel: {
+    marginLeft: 8,
+    //fontSize: 16,
+    fontFamily: 'Light',
+    color:'white',
+  },
+
  
 });

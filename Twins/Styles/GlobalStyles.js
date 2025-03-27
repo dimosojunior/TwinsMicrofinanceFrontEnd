@@ -1363,7 +1363,7 @@ ProjectBodyInputIcon:{
         fontFamily:"Bold",
     },
     TwinsMicrofinancesectionDesc: {
-        fontSize: 14,
+        fontSize: 12,
         color: 'white',
         marginBottom: 10,
         fontFamily:"Medium",
@@ -1381,8 +1381,8 @@ ProjectBodyInputIcon:{
 
      TwinsMicrofinancecard2: {
         width: width * 0.4,
-        // backgroundColor: 'rgba(255,255,255,0.2)',
-        backgroundColor: "#063164",
+        backgroundColor: 'rgba(255,255,255,0.2)',
+       // backgroundColor: "#063164",
         borderRadius: 10,
         paddingBottom: 10,
         paddingTop:10,

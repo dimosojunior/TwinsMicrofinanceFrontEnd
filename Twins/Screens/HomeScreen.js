@@ -51,8 +51,8 @@ const contents = [
 ];
 
 const contents2 = [
-    { id: '1', title: 'Wafanyakazi', icon: 'users', screen: 'Sajili Mteja' },
-    { id: '2', title: 'Vituo', icon: 'user', screen: 'Mikataba Yote' },
+    { id: '1', title: 'Vituo', icon: 'users', screen: 'Vituo Vilivyosajiliwa' },
+    { id: '2', title: 'Wafanyakazi', icon: 'user', screen: 'Mikataba Yote' },
     
     { id: '6', title: 'Mishahara', icon: 'user-circle', screen: 'Wamemaliza Hawajakopa Tena' },
 ];
@@ -334,7 +334,7 @@ useEffect(() => {
             {/* First Content List */}
             <View style={globalStyles.TwinsMicrofinancesection}>
                 <Text style={globalStyles.TwinsMicrofinancesectionTitle}>Mikopo</Text>
-                <Text style={globalStyles.TwinsMicrofinancesectionDesc}>Chagua huduma inayokufaa kutoka kwenye orodha yetu.</Text>
+                <Text style={globalStyles.TwinsMicrofinancesectionDesc}>Pata fursa za mikopo na uwekezaji kwa urahisi</Text>
                <FlatList
                 data={contents}
                 horizontal
@@ -347,7 +347,7 @@ useEffect(() => {
                         onPress={() => navigation.navigate(item.screen)}
                     >
                         <FontAwesome name={item.icon} 
-                        size={80} 
+                        size={60} 
                         color="white" 
                         style={globalStyles.TwinsMicrofinancecardIcon} 
                          />
@@ -361,7 +361,9 @@ useEffect(() => {
             {/* Second Content List */}
             <View style={globalStyles.TwinsMicrofinancesection}>
                 <Text style={globalStyles.TwinsMicrofinancesectionTitle}>Mishahara Na Wafanyakazi</Text>
-                <Text style={globalStyles.TwinsMicrofinancesectionDesc}>Pata fursa za mikopo na uwekezaji kwa urahisi.</Text>
+                <Text style={globalStyles.TwinsMicrofinancesectionDesc}>
+                Chagua huduma inayokufaa kutoka kwenye orodha yetu
+                </Text>
                <FlatList
                 data={contents2}
                 horizontal
@@ -373,7 +375,7 @@ useEffect(() => {
                         style={globalStyles.TwinsMicrofinancecard2} 
                         onPress={() => navigation.navigate(item.screen)}
                     >
-                        <FontAwesome name={item.icon} size={80} 
+                        <FontAwesome name={item.icon} size={60} 
                         color="white" 
                         style={globalStyles.TwinsMicrofinancecardIcon} 
                          />

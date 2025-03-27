@@ -513,9 +513,7 @@ const TableRowComponent = ({ item}) => {
   return (
     <View key={item.id} style={globalStyles.row2}>
     {userData && userData.is_cashier === true && (
-      
-      <>
-      {item.JumlaYaFainiZote <= 0 ? (
+     
 
       <TouchableOpacity
         style={[
@@ -531,7 +529,9 @@ const TableRowComponent = ({ item}) => {
           style={globalStyles.TableIconColor}
         />
       </TouchableOpacity>
-      ):(
+      )}
+
+    {userData && userData.is_cashier === true && (
     <TouchableOpacity
         style={[
           globalStyles.cell,
@@ -554,19 +554,22 @@ const TableRowComponent = ({ item}) => {
 
             ]}
         />
-
+      {item.JumlaYaFainiZote > 0 ? (
         <Text style={{
           color:'white',
           fontFamily:'Light',
         }}>{formatToThreeDigits(item.JumlaYaFainiZote)}</Text>
+        ):(
+
+        <Text style={{
+          color:'white',
+          fontFamily:'Light',
+        }}>0</Text>
+
+        )}
       </TouchableOpacity>
 
       )}
-      </>
-
-
-      )}
-
      
       <Text style={[globalStyles.cell, globalStyles.firstNameColumn]}>{item.JinaKamiliLaMteja}</Text>
       <Text style={[globalStyles.cell, globalStyles.tarehecolumn]}>{formatDate(item.TareheYaRejesho)}</Text>
@@ -611,9 +614,7 @@ const TableRowComponent = ({ item}) => {
   return (
     <View key={item.id} style={globalStyles.row2}>
     {userData && userData.is_cashier === true && (
-      
-      <>
-      {item.JumlaYaFainiZote <= 0 ? (
+     
 
       <TouchableOpacity
         style={[
@@ -629,12 +630,18 @@ const TableRowComponent = ({ item}) => {
           style={globalStyles.TableIconColor}
         />
       </TouchableOpacity>
-      ):(
+      )}
+
+    {userData && userData.is_cashier === true && (
     <TouchableOpacity
         style={[
           globalStyles.cell,
           globalStyles.buttoncolumn,
-          { justifyContent: 'center', alignItems: 'center' },
+          { 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            flexDirection:'row' ,
+          },
         ]}
         onPress={() => handlePressPokeaFaini(item)}
       >
@@ -648,14 +655,15 @@ const TableRowComponent = ({ item}) => {
 
             ]}
         />
+
+        <Text style={{
+          color:'white',
+          fontFamily:'Light',
+        }}>{formatToThreeDigits(item.JumlaYaFainiZote)}</Text>
       </TouchableOpacity>
 
       )}
-      </>
-
-
-      )}
-
+     
       <Text style={[globalStyles.cell, globalStyles.firstNameColumn]}>{item.JinaKamiliLaMteja}</Text>
       <Text style={[globalStyles.cell, globalStyles.tarehecolumn]}>{formatDate(item.TareheYaRejesho)}</Text>
       {item.KiasiAnachokopa > 0 ? (
@@ -664,7 +672,7 @@ const TableRowComponent = ({ item}) => {
      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
      )}
 
-      {item.RejeshoKwaSiku > 0 ? (
+       {item.RejeshoKwaSiku > 0 ? (
       <Text style={[globalStyles.cell, globalStyles.otherColumns]}>{formatToThreeDigits(item.RejeshoKwaSiku)}</Text>
      ):(
      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
@@ -1029,7 +1037,11 @@ style={globalStyles.FullRipotiYaSikuRightText}
               <View style={globalStyles.table}>
                 <View style={[globalStyles.row, globalStyles.header]}>
                 {userData && userData.is_cashier === true && (
-                <Text style={[globalStyles.cell2, globalStyles.buttoncolumn]}>Lipa</Text>
+                <Text style={[globalStyles.cell2, globalStyles.buttoncolumn]}>Rejesho</Text>
+                )}
+
+                 {userData && userData.is_cashier === true && (
+                <Text style={[globalStyles.cell2, globalStyles.buttoncolumn]}>Faini</Text>
                 )}
 
                
@@ -1067,8 +1079,13 @@ style={globalStyles.FullRipotiYaSikuRightText}
      <View style={globalStyles.table}>
                 <View style={[globalStyles.row, globalStyles.header]}>
                 {userData && userData.is_cashier === true && (
-                <Text style={[globalStyles.cell2, globalStyles.buttoncolumn]}>Lipa</Text>
+                <Text style={[globalStyles.cell2, globalStyles.buttoncolumn]}>Rejesho</Text>
                 )}
+
+                 {userData && userData.is_cashier === true && (
+                <Text style={[globalStyles.cell2, globalStyles.buttoncolumn]}>Faini</Text>
+                )}
+
 
                
 

@@ -117,7 +117,7 @@ function PokeaRejeshoStack( {navigation}){
       />
 
 
-
+{/*
   <Stack.Screen
       name="Futa Rejesho"
       component={FutaRejesho}
@@ -133,7 +133,7 @@ function PokeaRejeshoStack( {navigation}){
       // options={ () => ({ 
       //       headerLeft: () => <Header  title='About Page' />,
       //     })}
-      />
+      />*/}
 
 
 

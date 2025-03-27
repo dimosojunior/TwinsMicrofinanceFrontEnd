@@ -19,6 +19,7 @@ import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
 import * as DocumentPicker from 'expo-document-picker';
 import MinorHeader from '../Header/MinorHeader';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const { width, height } = Dimensions.get('window');
 
@@ -391,7 +392,8 @@ const handleRegistration = async () => {
 
           
       
-       <KeyboardAvoidingView style={styles.mainCon}>
+       <LinearGradient colors={['#015d68', '#000']} style={globalStyles.container}>
+
 
        <MinorHeader />
         <ScrollView 
@@ -432,7 +434,7 @@ const handleRegistration = async () => {
           </View>
           <View style={styles.container}>
             <View style={styles.loginLblCon}>
-              <Text style={styles.loginLbl}>Gegwajo Microfinance</Text>
+              <Text style={styles.loginLbl}>Twins Microfinance</Text>
             </View>
 
 
@@ -552,7 +554,7 @@ const handleRegistration = async () => {
          <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -566,7 +568,7 @@ const handleRegistration = async () => {
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -576,7 +578,7 @@ const handleRegistration = async () => {
           
           value={FomuNaBima}
           onChangeText={setFomuNaBima}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -615,7 +617,7 @@ const handleRegistration = async () => {
         <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -629,7 +631,7 @@ const handleRegistration = async () => {
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -639,7 +641,7 @@ const handleRegistration = async () => {
           
           value={ImetokaKwaBosi}
           onChangeText={setImetokaKwaBosi}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -680,7 +682,7 @@ const handleRegistration = async () => {
          <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -694,7 +696,7 @@ const handleRegistration = async () => {
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
 
             //paddingVertical:20,
           }]}
@@ -703,7 +705,7 @@ const handleRegistration = async () => {
           
           value={ImetokaKituoJirani}
           onChangeText={setImetokaKituoJirani}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -744,7 +746,7 @@ const handleRegistration = async () => {
          <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -758,7 +760,7 @@ const handleRegistration = async () => {
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
 
             //paddingVertical:20,
           }]}
@@ -767,7 +769,7 @@ const handleRegistration = async () => {
           
           value={KituoIlichotokaHela}
           onChangeText={setKituoIlichotokaHela}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -807,7 +809,7 @@ const handleRegistration = async () => {
           <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -821,7 +823,7 @@ const handleRegistration = async () => {
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
 
             //paddingVertical:20,
           }]}
@@ -830,7 +832,7 @@ const handleRegistration = async () => {
           
           value={Mkopo}
           onChangeText={setMkopo}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -870,7 +872,7 @@ const handleRegistration = async () => {
          <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -884,7 +886,7 @@ const handleRegistration = async () => {
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
 
             //paddingVertical:20,
           }]}
@@ -893,7 +895,7 @@ const handleRegistration = async () => {
           
           value={Posho}
           onChangeText={setPosho}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -963,7 +965,7 @@ Endelea
         <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -977,7 +979,7 @@ Endelea
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -987,7 +989,7 @@ Endelea
           
           value={ImeendaKwaBosi}
           onChangeText={setImeendaKwaBosi}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -1032,7 +1034,7 @@ Endelea
          <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -1046,7 +1048,7 @@ Endelea
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -1057,7 +1059,7 @@ Endelea
           
           value={ImeendaKituoJirani}
           onChangeText={setImeendaKituoJirani}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -1103,7 +1105,7 @@ Endelea
          <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -1117,7 +1119,7 @@ Endelea
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -1128,7 +1130,7 @@ Endelea
           
           value={KituoIlichoendaHela}
           onChangeText={setKituoIlichoendaHela}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -1176,7 +1178,7 @@ Endelea
         <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -1190,7 +1192,7 @@ Endelea
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -1200,7 +1202,7 @@ Endelea
           
           value={MatumiziMengine}
           onChangeText={setMatumiziMengine}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -1244,7 +1246,7 @@ Endelea
         <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -1258,7 +1260,7 @@ Endelea
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -1268,7 +1270,7 @@ Endelea
           
           value={IdadiYaMikopoYaLeo}
           onChangeText={setIdadiYaMikopoYaLeo}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -1314,7 +1316,7 @@ Endelea
         <FontAwesome size={20} color="#c07d18" name="pencil" />
 
         {/*  <Text style={{
-           color: 'black', 
+           color: 'white', 
            fontSize: 16,
            fontWeight:'bold',
            marginLeft:10,
@@ -1328,7 +1330,7 @@ Endelea
 
           <TextInput
           style= {[styles.textinputi,{ 
-            color: 'black',width:'88%',
+            color: 'white',width:'88%',
             //backgroundColor:'black',
 
             //paddingVertical:20,
@@ -1338,7 +1340,7 @@ Endelea
           
           value={IdadiYaMikatabaMipyaLeo}
           onChangeText={setIdadiYaMikatabaMipyaLeo}
-        placeholderTextColor="black"
+        placeholderTextColor="#bbb"
         />
 
       
@@ -1516,7 +1518,7 @@ Rudi nyuma
 </TouchableOpacity>
 )}
 
-      </KeyboardAvoidingView>
+      </LinearGradient>
 
 
             
@@ -1532,7 +1534,7 @@ Rudi nyuma
 export default AddRipoti;
 
 const styles = StyleSheet.create({
-  mainCon: {
+ mainCon: {
     backgroundColor: 'white',
     flex: 1,
   },
@@ -1551,7 +1553,7 @@ const styles = StyleSheet.create({
     bottom: 40,
   },
   loginLbl: {
-    color: '#000',
+    color: COLORS.white,
     fontSize: 20,
     marginBottom:10,
     textAlign:'center',
@@ -1561,9 +1563,11 @@ const styles = StyleSheet.create({
   forgotDes: {
     position: 'relative',
     bottom: 35,
+     color: COLORS.white,
   },
   forgotDesLbl: {
     color: '#000',
+     color: COLORS.white,
    // fontFamily: Fonts.type.NotoSansRegular,
   },
   //registerLbl: {color: '#0057ff', fontFamily: Fonts.type.NotoSansSemiBold},
@@ -1575,7 +1579,7 @@ registerLbl:{
   // paddingVertical:10,
   // paddingHorizontal:40,
   // borderRadius:8,
-   color:'white',
+    color: COLORS.white,
   // borderColor:'green',
   // borderWidth:1,
   marginRight:20,
@@ -1609,7 +1613,7 @@ registerLbl:{
       color: COLORS.white,
         fontSize: SIZES.h3,
         // borderBottomColor: COLORS.lightGrey,
-        borderColor: COLORS.green,
+        //borderColor: COLORS.green,
         borderWidth: 1,
         paddingVertical: 10,
         marginHorizontal: 15,
@@ -1623,7 +1627,7 @@ registerLbl:{
         flex:1,
 
         borderWidth:2,
-        borderColor:'black',
+        borderColor:COLORS.white,
         
          
     },
@@ -1633,6 +1637,7 @@ registerLbl:{
         color: COLORS.white,
         //fontSize: SIZES.h3,
         fontFamily:'Light',
+
         
         
         marginHorizontal: 0,
@@ -1641,23 +1646,5 @@ registerLbl:{
         
     },
 
-
-
- ButtonContainerUpdate: {
-    padding: 15,
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 25,
-  },
-  ButtonTextUpdate: {
-    color: 'white',
-    textAlign: 'center',
-    fontFamily: 'Medium',
-    backgroundColor: 'blue',
-    paddingVertical: 10,
-    paddingHorizontal: 30,
-    borderRadius: 10,
-  },
 
 });

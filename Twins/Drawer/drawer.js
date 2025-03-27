@@ -336,16 +336,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
                   </Text>
                 </TouchableOpacity>
 
-                 <TouchableOpacity
-                  onPress={() => {
-                    setDropdownVisible(false);
-                    navigation.navigate("Ripoti Ya Siku"); // Navigate to first option
-                  }}
-                >
-                  <Text style={{ color: "white", marginVertical: 8 }}>
-                    Ripoti Ya Siku
-                  </Text>
-                </TouchableOpacity>
+                
                
               </View>
             )}
@@ -605,7 +596,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
         />
       )}
 
-   
+   {/*
          <Drawer.Screen
           name="Hawajarejesha tarehe"
           options={{
@@ -617,7 +608,7 @@ const [dropdownVisible2, setDropdownVisible2] = useState(false);
             )
           }}
           component={HawajarejeshaJana}
-        />
+        />*/}
 
      {/*   <Drawer.Screen
           name="Mikataba Yote"

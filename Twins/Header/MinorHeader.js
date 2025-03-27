@@ -42,6 +42,32 @@ const GoHome = () => {
   }
 
 
+
+  const [greeting, setGreeting] = useState('');
+
+  // Function to get the current time and set the greeting based on the time
+  const setGreetingBasedOnTime = () => {
+    const currentHour = new Date().getHours();
+
+    if (currentHour >= 5 && currentHour < 12) {
+      setGreeting('GOOD MORNING');
+    } else if (currentHour >= 12 && currentHour <= 15) {
+      setGreeting('GOOD AFTERNOON');
+    } else if (currentHour > 15 && currentHour <= 18) {
+      setGreeting('GOOD EVENING');
+    } else {
+      setGreeting('GOOD NIGHT');
+    }
+
+  };
+
+  // Use useEffect to set the initial greeting and update it when needed
+  useEffect(() => {
+    setGreetingBasedOnTime();
+  }, []);
+
+
+
   return (
 
      <>{!fontsLoaded ? (<View/>):(
@@ -68,8 +94,9 @@ const GoHome = () => {
                 
           </TouchableOpacity>
 
-          <Text style={{fontSize:20,
-            fontFamily:"Regular",color:'white'}}>MICROFINANCE</Text>
+         <Text style={{fontSize:16,
+            fontFamily:"Regular",
+            color:'white'}}>{greeting}</Text>
          <TouchableOpacity 
            onPress={GoHome}
           >

@@ -309,7 +309,7 @@ const handleRefresh = async () => {
 
   const handlePress = (item) => navigation.navigate('Home', { item });
   const DeletehandlePress = (item) =>
-    navigation.navigate('Delete Mteja', { ...item, postId: item.id });
+    navigation.navigate('Futa Faini', { ...item, postId: item.id });
 
 const handlePressDetailsPage = (item) =>
     navigation.navigate('Mteja Details', { ...item });
@@ -448,6 +448,19 @@ const TableRowComponent = ({ item}) => {
      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
      )}
 
+{userData && userData.is_cashier === true && (
+      <TouchableOpacity
+        style={[
+          globalStyles.cell,
+          globalStyles.buttoncolumn,
+          { justifyContent: 'center', alignItems: 'center' },
+        ]}
+        onPress={() => DeletehandlePress(item)}
+      >
+        <FontAwesome name="trash-o" size={30} style={globalStyles.TableIconColorDelete} />
+      </TouchableOpacity>
+      )}
+
 
 
 
@@ -472,6 +485,19 @@ const TableRowComponent = ({ item}) => {
      <Text style={[globalStyles.cell, globalStyles.otherColumns]}>0</Text>
      )}
 
+
+{userData && userData.is_cashier === true && (
+      <TouchableOpacity
+        style={[
+          globalStyles.cell,
+          globalStyles.buttoncolumn,
+          { justifyContent: 'center', alignItems: 'center' },
+        ]}
+        onPress={() => DeletehandlePress(item)}
+      >
+        <FontAwesome name="trash-o" size={30} style={globalStyles.TableIconColorDelete} />
+      </TouchableOpacity>
+      )}
 
 
 
@@ -596,7 +622,9 @@ const TableRowComponent = ({ item}) => {
                   <Text style={[globalStyles.cell2, globalStyles.firstNameColumn]}>Jina</Text>
                   
                   <Text style={[globalStyles.cell2, globalStyles.otherColumns]}>Kiasi</Text>
-           
+            {userData && userData.is_cashier === true && (
+                     <Text style={[globalStyles.cell2, globalStyles.buttoncolumn]}>Futa</Text>
+                 )}
       
                 </View>
 
